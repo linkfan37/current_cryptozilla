@@ -1,0 +1,155 @@
+{
+  "images": [
+    {"uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQCAYAAAB3AH1ZAAAAVElEQVR42mMo8dH4TyxmgAJc4mSBUQcMuAOOb5r9n1iMS8+oA4a+A2xtrMEYZiA6n6YOgFlGDMalhyIH/Fdh+E8sxqWHMgfEUeCAOAge2g4YBQMNAGBpzhhWoPBCAAAAAElFTkSuQmCC"},
+    {"uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQCAYAAAB3AH1ZAAAAOElEQVR42mNgYGD4TwKGAVziZIFRB4w6YNQBow4YWAf8V2H4TyzGpYcyB8RR4IA4CB7aDhgFAw0ApTb2wd6/TU8AAAAASUVORK5CYII="}
+  ],
+  "accessors": [
+    {
+      "componentType": 5126,
+      "min": [
+        -1,
+        -1,
+        -6
+      ],
+      "byteOffset": 0,
+      "bufferView": 0,
+      "max": [
+        1,
+        1,
+        6
+      ],
+      "count": 36,
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "byteOffset": 0,
+      "bufferView": 1,
+      "count": 36,
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "byteOffset": 0,
+      "bufferView": 2,
+      "count": 36,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "byteOffset": 0,
+      "bufferView": 2,
+      "count": 36,
+      "type": "VEC2"
+    }
+  ],
+  "textures": [
+    {
+      "source": 0,
+      "sampler": 0
+    },
+    {
+      "source": 1,
+      "sampler": 0
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 432,
+      "uri": "data:application/octet-stream;base64,AACAvwAAgL8AAMBAAACAvwAAgD8AAMBAAACAvwAAgD8AAMDAAACAvwAAgD8AAMDAAACAvwAAgL8AAMDAAACAvwAAgL8AAMBAAACAPwAAgL8AAMDAAACAPwAAgD8AAMDAAACAPwAAgD8AAMBAAACAPwAAgD8AAMBAAACAPwAAgL8AAMBAAACAPwAAgL8AAMDAAACAvwAAgL8AAMDAAACAPwAAgL8AAMDAAACAPwAAgL8AAMBAAACAPwAAgL8AAMBAAACAvwAAgL8AAMBAAACAvwAAgL8AAMDAAACAvwAAgD8AAMBAAACAPwAAgD8AAMBAAACAPwAAgD8AAMDAAACAPwAAgD8AAMDAAACAvwAAgD8AAMDAAACAvwAAgD8AAMBAAACAvwAAgD8AAMDAAACAPwAAgD8AAMDAAACAPwAAgL8AAMDAAACAPwAAgL8AAMDAAACAvwAAgL8AAMDAAACAvwAAgD8AAMDAAACAvwAAgL8AAMBAAACAPwAAgL8AAMBAAACAPwAAgD8AAMBAAACAPwAAgD8AAMBAAACAvwAAgD8AAMBAAACAvwAAgL8AAMBA"
+    },
+    {
+      "byteLength": 432,
+      "uri": "data:application/octet-stream;base64,AACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/"
+    },
+    {
+      "byteLength": 288,
+      "uri": "data:application/octet-stream;base64,AADgPgAAQD8AAAA/AABAPwAAAD8AAAAAAAAAPwAAAAAAAOA+AAAAAAAA4D4AAEA/AAAAPgAAAAAAAEA+AAAAAAAAQD4AAEA/AABAPgAAQD8AAAA+AABAPwAAAD4AAAAAAACAPgAAAAAAAKA+AAAAAAAAoD4AAEA/AACgPgAAQD8AAIA+AABAPwAAgD4AAAAAAAAAAAAAQD8AAIA9AABAPwAAgD0AAAAAAACAPQAAAAAAAAAAAAAAAAAAAAAAAEA/AAAAAAAAAD4AAIA9AAAAPgAAgD0AAAAAAACAPQAAAAAAAAAAAAAAAAAAAAAAAAA+AAAAAAAAID8AAIA9AAAgPwAAgD0AAEA/AACAPQAAQD8AAAAAAABAPwAAAAAAACA/"
+    }
+  ],
+  "bufferViews": [
+    {
+      "byteOffset": 0,
+      "byteLength": 432,
+      "buffer": 0,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "byteOffset": 0,
+      "byteLength": 432,
+      "buffer": 1,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "byteOffset": 0,
+      "byteLength": 288,
+      "buffer": 2,
+      "byteStride": 8,
+      "target": 34962
+    }
+  ],
+  "samplers": [{
+    "minFilter": 9728,
+    "wrapT": 33071,
+    "wrapS": 33071,
+    "magFilter": 9728
+  }],
+  "scene": 0,
+  "nodes": [{
+    "rotation": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      -1,
+      1,
+      1
+    ],
+    "mesh": 0
+  }],
+  "materials": [{
+    "name": "01_Mouth_Cigarette-Material",
+    "emissiveTexture": {
+      "index": 1,
+      "texCoord": 1
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {"index": 0},
+      "metallicFactor": 0,
+      "roughnessFactor": 1
+    },
+    "emissiveFactor": [
+      1,
+      1,
+      1
+    ]
+  }],
+  "animations": [],
+  "scenes": [{"nodes": [0]}],
+  "asset": {
+    "generator": "VoxEdit Beta 935def85",
+    "version": "2.0"
+  },
+  "meshes": [{
+    "primitives": [{
+      "mode": 4,
+      "material": 0,
+      "attributes": {
+        "POSITION": 0,
+        "TEXCOORD_1": 3,
+        "TEXCOORD_0": 2,
+        "NORMAL": 1
+      }
+    }],
+    "name": "01_Mouth_Cigarette-Mesh"
+  }]
+}

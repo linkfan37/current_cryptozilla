@@ -1,0 +1,8 @@
+#body_center
+#_head_top
+#_mouth
+#left_arm 1,2,3
+#right_arm 1,2,3
+#left leg 1,2,3 // expecting 2 not to have it seen 
+#right leg 1,2,3 // expecting 1, 
+#tail 1,2,3
