@@ -69,7 +69,7 @@ def head_and_eyes(tmp):
 assetname=""
 exchangewith=""
 #reading json File
-for i in range(1,999):
+for i in range(177,179):
     print("I: ",i)
     if i == 666 or i > 990:
         continue 
@@ -78,26 +78,54 @@ for i in range(1,999):
                 data = json.load(infile)
     #reloading model with certain properties
     isloaded=0
-    if "Head" in data.keys() and "Eyes" in data.keys():
-        print(skinpath+data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+".gltf")
-        if path.exists(skinpath+data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+".gltf"):
-            bpy.ops.import_scene.gltf(filepath=skinpath+data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+".gltf", files=[{"name":data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+".gltf", "name": data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+".gltf"}], loglevel=50)
-            isloaded=1
+    if "Mouth" in data.keys() and data["Mouth"]=="fangs":
+        print("HELLO")
+        if "Head" in data.keys() and "Eyes" in data.keys():
             print("Head_Eyes\n")
-    if "Head" in data.keys():
-        if path.exists(skinpath+data["Skin"]+"_"+data["Head"]+".gltf") and isloaded==0:
-            bpy.ops.import_scene.gltf(filepath=skinpath+data["Skin"]+"_"+data["Head"]+".gltf", files=[{"name":data["Skin"]+"_"+data["Head"]+".gltf", "name":data["Skin"]+"_"+data["Head"]+".gltf"}], loglevel=50)
-            isloaded=1
+            print(skinpath+data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+"_teeth"+".gltf")
+            if path.exists(skinpath+data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+"_teeth"+".gltf"):
+                bpy.ops.import_scene.gltf(filepath=skinpath+data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+"_teeth"+".gltf", files=[{"name":data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+"_teeth"+".gltf", "name": data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+"_teeth"+".gltf"}], loglevel=50)
+                isloaded=1
+        if "Head" in data.keys():
             print("HEAD\n")
-    if "Eyes" in data.keys():
-        print(skinpath+data["Skin"]+"_"+data["Eyes"]+".gltf")
-        if path.exists(skinpath+data["Skin"]+"_"+data["Eyes"]+".gltf") and isloaded==0:
-            bpy.ops.import_scene.gltf(filepath=skinpath+data["Skin"]+"_"+data["Eyes"]+".gltf", files=[{"name":data["Skin"]+"_"+data["Eyes"]+".gltf", "name":data["Skin"]+"_"+data["Eyes"]+".gltf"}], loglevel=50)
-            isloaded=1
+            if path.exists(skinpath+data["Skin"]+"_"+data["Head"]+"_teeth"+".gltf") and isloaded==0:
+                bpy.ops.import_scene.gltf(filepath=skinpath+data["Skin"]+"_"+data["Head"]+"_teeth"+".gltf", files=[{"name":data["Skin"]+"_"+data["Head"]+"_teeth"+".gltf", "name":data["Skin"]+"_"+data["Head"]+"_teeth"+".gltf"}], loglevel=50)
+                isloaded=1
+        if "Eyes" in data.keys():
+            print(skinpath+data["Skin"]+"_"+data["Eyes"]+".gltf")
             print("EYES\n")
+            if path.exists(skinpath+data["Skin"]+"_"+data["Eyes"]+"_teeth"+".gltf") and isloaded==0:
+                bpy.ops.import_scene.gltf(filepath=skinpath+data["Skin"]+"_"+data["Eyes"]+"_teeth"+".gltf", files=[{"name":data["Skin"]+"_"+data["Eyes"]+"_teeth"+".gltf", "name":data["Skin"]+"_"+data["Eyes"]+"_teeth"+".gltf"}], loglevel=50)
+                isloaded=1
+                
+    else:     
+        if "Head" in data.keys() and "Eyes" in data.keys():
+            print(skinpath+data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+".gltf")
+            if path.exists(skinpath+data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+".gltf"):
+                bpy.ops.import_scene.gltf(filepath=skinpath+data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+".gltf", files=[{"name":data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+".gltf", "name": data["Skin"]+"_"+data["Head"]+"_"+data["Eyes"]+".gltf"}], loglevel=50)
+                isloaded=1
+                print("Head_Eyes\n")
+        if "Head" in data.keys():
+            if path.exists(skinpath+data["Skin"]+"_"+data["Head"]+".gltf") and isloaded==0:
+                bpy.ops.import_scene.gltf(filepath=skinpath+data["Skin"]+"_"+data["Head"]+".gltf", files=[{"name":data["Skin"]+"_"+data["Head"]+".gltf", "name":data["Skin"]+"_"+data["Head"]+".gltf"}], loglevel=50)
+                isloaded=1
+                print("HEAD\n")
+        if "Eyes" in data.keys():
+            print(skinpath+data["Skin"]+"_"+data["Eyes"]+".gltf")
+            if path.exists(skinpath+data["Skin"]+"_"+data["Eyes"]+".gltf") and isloaded==0:
+                bpy.ops.import_scene.gltf(filepath=skinpath+data["Skin"]+"_"+data["Eyes"]+".gltf", files=[{"name":data["Skin"]+"_"+data["Eyes"]+".gltf", "name":data["Skin"]+"_"+data["Eyes"]+".gltf"}], loglevel=50)
+                isloaded=1
+                print("EYES\n")
+            
+            
+            
     if isloaded == 0:
-        bpy.ops.import_scene.gltf(filepath=skinpath+data["Skin"]+".gltf", files=[{"name":data["Skin"]+".gltf", "name":data["Skin"]+".gltf"}], loglevel=50)
-        print("NOTHING\n")
+        if "Mouth" in data.keys() and data["Mouth"]=="fangs":
+            bpy.ops.import_scene.gltf(filepath=skinpath+data["Skin"]+"_teeth"+".gltf", files=[{"name":data["Skin"]+"_teeth"+".gltf", "name":data["Skin"]+"_teeth"+".gltf"}], loglevel=50)
+            print("NOTHING\n")
+        else:
+            bpy.ops.import_scene.gltf(filepath=skinpath+data["Skin"]+".gltf", files=[{"name":data["Skin"]+".gltf", "name":data["Skin"]+".gltf"}], loglevel=50)
+            print("NOTHING\n")
     exists = 0
     #head shaped for eyes
     if "Head" in data.keys() and "Eyes" in data.keys():
