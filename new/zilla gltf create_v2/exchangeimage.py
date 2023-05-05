@@ -53,7 +53,7 @@ def createUri(dirName):
 """
 gltf = GLTF2()
 image = Image()
-image.uri = "/home/flo/projekt/new/zilla gltf create_v2/skins/Cream_image2.png"
+image.uri = "E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/Cream_image2.png"
 gltf.images.append(image)
 gltf.convert_images(ImageFormat.DATAURI)
 gltf.images[0].uri  # will now be something like "data:image/png;base64,iVBORw0KGg..."
@@ -64,7 +64,7 @@ def exchange():
     print('SKIN COLOR EXCHANGE')
     #partlist = []
     #colorlist = ["Cream","Crocodile","Dark_Cyan","Dark_Pink","Dark_Purple","Fire","Grayscale","Huntergreen","Independance","KellyGreen","Lightorange","Lightpurple","Orange","Palegreen","Persian","Pidgeonblue","Pink","Red","Violet"]
-    colordirlist = listcolor("/home/flo/projekt/new/zilla gltf create_v2/skins/")
+    colordirlist = listcolor("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/")
     #print(colordirlist)
     i = 0
 
@@ -73,7 +73,7 @@ def exchange():
     for color in colordirlist:
         if '.py' not in color:
             uridir = createUri(color)
-            color2 = color.replace("/home/flo/projekt/new/zilla gltf create_v2/skins/","")
+            color2 = color.replace("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/","")
             jsonpath = os.path.join(color, color2+".json")
             with open(jsonpath, 'w') as outfile:
                 json.dump(uridir,outfile,indent=2)

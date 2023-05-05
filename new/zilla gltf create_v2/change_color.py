@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 from tracemalloc import start
 from PIL import Image
+import gc
 def change_col():
     print('SKIN COLOR CHANGE')
 
-    List=["Body_Center.png","head_top.png","left_arm_1.png","left_arm_2.png","left_arm_3.png","left_leg_1.png","left_leg_2.png","left_leg_3.png","mouth.png","right_arm_1.png","right_arm_2.png","right_arm_3.png","right_leg_1.png","right_leg_2.png","right_leg_3.png","tail_1.png","tail_2.png","tail_3.png","tail_4.png","shade_body.png","shade_head.png","shade_tail_1.png","shade_tail_2.png","shade_tail_3.png","shade_tail_4.png"]
+    List=["body_center.png","head_top.png","left_arm_1.png","left_arm_2.png","left_arm_3.png","left_leg_1.png","left_leg_2.png","left_leg_3.png","mouth.png","right_arm_1.png","right_arm_2.png","right_arm_3.png","right_leg_1.png","right_leg_2.png","right_leg_3.png","tail_1.png","tail_2.png","tail_3.png","tail_4.png","shade_body.png","shade_head.png","shade_tail_1.png","shade_tail_2.png","shade_tail_3.png","shade_tail_4.png"]
 
     for part in List:
         print('\r└[read given img data] of '+ part, end='')
-        image = Image.open('/home/flo/projekt/new/zilla gltf create_v2/stantard_skins2/' + part)
+        image = Image.open('E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/stantard_skins2/' + part)
         #print(image)
         #print(image.mode)
         rgba=image.convert("RGBA")
@@ -304,46 +305,67 @@ def change_col():
                 #print(item)
 
         rgba.putdata(DarkPink)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/dark pink/dark pink_"+ part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/dark pink/dark pink_"+ part, "PNG")
         rgba.putdata(Pink)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/pink/pink_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/pink/pink_"+part, "PNG")
         rgba.putdata(Cream)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/cream/cream_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/cream/cream_"+part, "PNG")
         rgba.putdata(Crocodile)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/crocodile/crocodile_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/crocodile/crocodile_"+part, "PNG")
         rgba.putdata(DarkCyan)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/dark cyan/dark cyan_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/dark cyan/dark cyan_"+part, "PNG")
         rgba.putdata(DarkPurple)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/dark purple/dark purple_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/dark purple/dark purple_"+part, "PNG")
         rgba.putdata(Fire)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/fire/fire_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/fire/fire_"+part, "PNG")
         rgba.putdata(Grayscale)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/grayscale/grayscale_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/grayscale/grayscale_"+part, "PNG")
         rgba.putdata(HunterGreen)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/hunter green/hunter green_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/hunter green/hunter green_"+part, "PNG")
         rgba.putdata(Independance_blue)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/independance blue/independance blue_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/independance blue/independance blue_"+part, "PNG")
         rgba.putdata(Kelly_green)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/kelly green/kelly green_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/kelly green/kelly green_"+part, "PNG")
         rgba.putdata(Light_orange)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/light orange/light orange_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/light orange/light orange_"+part, "PNG")
         rgba.putdata(Light_purple)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/light purple/light purple_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/light purple/light purple_"+part, "PNG")
         rgba.putdata(Orange)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/orange/orange_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/orange/orange_"+part, "PNG")
         rgba.putdata(Pale_Green)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/pale green/pale green_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/pale green/pale green_"+part, "PNG")
         rgba.putdata(Persian)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/persian green/persian green_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/persian green/persian green_"+part, "PNG")
         rgba.putdata(Pidgeon_Blue)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/pigeon blue/pigeon blue_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/pigeon blue/pigeon blue_"+part, "PNG")
         rgba.putdata(Red)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/red/red_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/red/red_"+part, "PNG")
         rgba.putdata(Violet)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/violet/violet_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/violet/violet_"+part, "PNG")
         rgba.putdata(Blue)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/blue/blue_"+part, "PNG")
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/blue/blue_"+part, "PNG")
         rgba.putdata(og)
-        rgba.save("/home/flo/projekt/new/zilla gltf create_v2/skins/og/og_"+part, "PNG")
-
+        rgba.save("E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/og/og_"+part, "PNG")
+    del  og 
+    del    DarkPink 
+    del    Pink 
+    del    Cream 
+    del    Crocodile
+    del    DarkCyan 
+    del    DarkPurple 
+    del    Fire
+    del    Grayscale
+    del    HunterGreen 
+    del    Independance_blue 
+    del    Kelly_green 
+    del    Light_orange 
+    del    Light_purple
+    del    Orange 
+    del    Pale_Green 
+    del    Persian 
+    del    Pidgeon_Blue 
+    del    Red 
+    del    Violet 
+    del    Blue 
+    gc.collect()
     print('\r└[read given img data] of '+ part)

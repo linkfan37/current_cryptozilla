@@ -1,31 +1,6 @@
 import json
 from alive_progress import alive_bar
 
-Bodyuri=""
-head_top_uri=""
-mouthuri=""
-left_arm_1=""
-left_arm_2=""
-left_arm_3=""
-right_arm_1=""
-right_arm_2=""
-right_arm_3=""
-left_leg_1=""
-left_leg_2=""
-left_leg_3=""
-right_leg_1=""
-right_leg_2=""
-right_leg_3=""
-tail_1=""
-tail_2=""
-tail_3=""
-tail_4=""
-shade_body=""
-shade_head=""
-shade_tail_1=""
-shade_tail_2=""
-shade_tail_3=""
-shade_tail_4=""
 
 def creategltfs( gltf_in = 'thirstplace.gltf'):
     print('CREATE COLOR VARIATIONS')
@@ -36,85 +11,97 @@ def creategltfs( gltf_in = 'thirstplace.gltf'):
     #gltf_in = 'thirstplace.gltf'
     gltf_name = gltf_in.replace(".gltf","")
     
-    uri_read_create(gltf_in)
+    gltf_in = gltf_in.replace("\\","/")
+    red = readlines_create(gltf_in)
 
-    print(Bodyuri)
+    #print(Bodyuri)
     #for skin in skins:
     print('└[skin replace]')
     i = 0
     with alive_bar(len(skins),force_tty=True) as bar:
         for skin in skins:
-            f = open('/home/flo/projekt/new/zilla gltf create_v2/gltf in/'+gltf_in, 'r')
-            f2 = open('/home/flo/projekt/new/zilla gltf create_v2/gltf out/'+color[i]+"_"+gltf_name+'.gltf', 'w')
+            f = open('E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/gltf in/'+gltf_in, 'r')
+            f2 = open('E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/gltf out/'+color[i]+"_"+gltf_name+'.gltf', 'w')
+            li = 0
+            print(len(red))
             while True:
                 line = f.readline()
-                with open('/home/flo/projekt/new/zilla gltf create_v2/skins/'+skin) as json_file:
+                with open('E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/skins/'+skin) as json_file:
                     data = json.load(json_file)
-                if Bodyuri in line:
-                    line = line.replace(Bodyuri,data[color[i]+'_Body_Center'])
-                if head_top_uri in line:
-                    line = line.replace(head_top_uri,data[color[i]+'_head_top'])
-                if mouthuri in line:
-                    line = line.replace(mouthuri,data[color[i]+'_mouth'])
-                if left_arm_1 in line:
-                    line = line.replace(left_arm_1,data[color[i]+'_left_arm_1'])
-                if left_arm_2 in line:
-                    line = line.replace(left_arm_2,data[color[i]+'_left_arm_2'])
-                if left_arm_3 in line:
-                    line = line.replace(left_arm_3,data[color[i]+'_left_arm_3'])
-                if right_arm_1 in line:
-                    line = line.replace(right_arm_1,data[color[i]+'_right_arm_1'])
-                if right_arm_2 in line:
-                    line = line.replace(right_arm_2,data[color[i]+'_right_arm_2'])
-                if right_arm_3!="":
-                    if right_arm_3 in line:
-                        line = line.replace(right_arm_3,data[color[i]+'_right_arm_3'])
-                if right_leg_1 in line:
-                    line = line.replace(right_leg_1,data[color[i]+'_right_leg_1'])
-                if right_leg_2 in line:
-                    line = line.replace(right_leg_2,data[color[i]+'_right_leg_2'])
-                if right_leg_3 in line:
-                    line = line.replace(right_leg_3,data[color[i]+'_right_leg_3'])
-                if left_leg_1 in line:
-                    line = line.replace(left_leg_1,data[color[i]+'_left_leg_1'])
-                if left_leg_2 in line:
-                    line = line.replace(left_leg_2,data[color[i]+'_left_leg_2'])
-                if left_leg_3 in line:
-                    line = line.replace(left_leg_3,data[color[i]+'_left_leg_3'])
-                if tail_1 in line:
-                    line = line.replace(tail_1,data[color[i]+'_tail_1'])
-                if tail_2 in line:
-                    line = line.replace(tail_2,data[color[i]+'_tail_2'])
-                if tail_3 in line:
-                    line = line.replace(tail_3,data[color[i]+'_tail_3'])
-                if tail_4 in line:
-                    line = line.replace(tail_4,data[color[i]+'_tail_4'])
-                if shade_body in line:
-                    line = line.replace(shade_body,data[color[i]+'_shade_body'])
-                if shade_head in line:
-                    line = line.replace(shade_head,data[color[i]+'_shade_head'])
-                if shade_tail_1 in line:
-                    line = line.replace(shade_tail_1,data[color[i]+'_shade_tail_1'])
-                if shade_tail_2 in line:
-                    line = line.replace(shade_tail_2,data[color[i]+'_shade_tail_2'])
-                if shade_tail_3 in line:
-                    line = line.replace(shade_tail_3,data[color[i]+'_shade_tail_3'])
-                if shade_tail_4 in line:
-                    line = line.replace(shade_tail_4,data[color[i]+'_shade_tail_4'])
+    	        
+                replacement=""
+
+                if '"},' in line:
+                    replacement = str(line.replace('{"uri": "','').replace('"},','').strip())
+                else:
+                    replacement = str(line.replace('{"uri": "','').replace('"}','').strip())
+                
+                if li == red[0]:
+                    line = line.replace(replacement,data[color[i]+'_body_center'])
+                if li == red[1]:
+                    line = line.replace(replacement,data[color[i]+'_head_top'])
+                if  li == red[2]:
+                    line = line.replace(replacement,data[color[i]+'_mouth'])
+                if li == red[3]:
+                    line = line.replace(replacement,data[color[i]+'_left_arm_1'])
+                if li == red[4]:
+                    line = line.replace(replacement,data[color[i]+'_left_arm_2'])
+                if li == red[5]:
+                    line = line.replace(replacement,data[color[i]+'_left_arm_3'])
+                if li == red[6]:
+                    line = line.replace(replacement,data[color[i]+'_right_arm_1'])
+                if li == red[7]:
+                    line = line.replace(replacement,data[color[i]+'_right_arm_2'])
+                if 0 != red[8]:
+                    if li == red[8]: 
+                        line = line.replace(replacement,data[color[i]+'_right_arm_3'])
+                if li == red[9]:
+                    line = line.replace(replacement,data[color[i]+'_right_leg_1'])
+                if li == red[10]:
+                    line = line.replace(replacement,data[color[i]+'_right_leg_2'])
+                if li == red[11]:
+                    line = line.replace(replacement,data[color[i]+'_right_leg_3'])
+                if li == red[12]:
+                    line = line.replace(replacement,data[color[i]+'_left_leg_1'])
+                if li == red[13]:
+                    line = line.replace(replacement,data[color[i]+'_left_leg_2'])
+                if li == red[14]:
+                    line = line.replace(replacement,data[color[i]+'_left_leg_3'])
+                if li == red[15]:
+                    line = line.replace(replacement,data[color[i]+'_tail_1'])
+                if li == red[16]:
+                    line = line.replace(replacement,data[color[i]+'_tail_2'])
+                if li == red[17]:
+                    line = line.replace(replacement,data[color[i]+'_tail_3'])
+                if li == red[18]:
+                    line = line.replace(replacement,data[color[i]+'_tail_4'])
+                if li == red[19]:
+                    line = line.replace(replacement,data[color[i]+'_shade_body'])
+                if li == red[20]:
+                    line = line.replace(replacement,data[color[i]+'_shade_head'])
+                if li == red[21]:
+                    line = line.replace(replacement,data[color[i]+'_shade_tail_1'])
+                if li == red[22]:
+                    line = line.replace(replacement,data[color[i]+'_shade_tail_2'])
+                if li == red[23]:
+                    line = line.replace(replacement,data[color[i]+'_shade_tail_3'])
+                if li == red[24]:
+                    line = line.replace(replacement,data[color[i]+'_shade_tail_4'])
 
                 if not line:
                     break
                 f2.write(line)
+                li= li +1
             f.close()
             f2.close()
             bar()
             i = i + 1
 
-def uri_read_create(gltf_in):
+"""def uri_read_create(gltf_in):
      #/////////////URI READ/////////////
     print('└[uri read]')
 
-    uri_reader = open('/home/flo/projekt/new/zilla gltf create_v2/gltf in/'+gltf_in, 'r')
+    uri_reader = open('E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/gltf in/'+gltf_in, 'r')
     readlines=readlines_create(gltf_in)
     
     for line_num, line in enumerate(uri_reader.readlines()):
@@ -159,7 +146,7 @@ def uri_read_create(gltf_in):
         if line_num>50:
             break
 
-    uri_reader.close()
+    uri_reader.close()"""
     
 def readlines_create(gltf_in):
     if "tentacle" in gltf_in or "canon" in gltf_in:

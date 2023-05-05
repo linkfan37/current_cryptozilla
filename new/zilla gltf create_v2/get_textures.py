@@ -2,7 +2,7 @@ import urllib.request
 import get_uri_dict 
 def fetch(gltf_in):
     print("Begining downloading of the textures")
-    path = "/home/flo/projekt/new/zilla gltf create_v2/stantard_skins2/"
+    path = "E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/stantard_skins2/"
     uris = get_uri_dict.geturis(gltf_in)
     #print(uris)
     print('Beginning file download with urllib2...')

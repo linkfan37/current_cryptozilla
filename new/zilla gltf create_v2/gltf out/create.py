@@ -1,5 +1,5 @@
 import os
-mypath = "/home/flo/projekt/new/zilla gltf create_v2/gltf out/"
+mypath = "E:/Zilla/current_cryptozilla/new/zilla gltf create_v2/gltf out/"
 color = ["light orange","pale green","blue","fire","independance blue","light purple","grayscale","pink","dark cyan","red","persian green","orange","pigeon blue","dark pink","kelly green","violet","dark purple","cream","crocodile","hunter green","og"]
 options = ["Skin_Body_Ananas","Skin_Body"]
 bodies= ['zombie (1)','zombie (2)','zombie (3)','canon hand','tentacle hand',
